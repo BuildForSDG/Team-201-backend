@@ -8,12 +8,12 @@ if(envFound.error) {
 }
 
 const serverSettings = {
-	port: process.env.PORT || 8080,
+	port: process.env.PORT
 	ssl: null  //require('./ssl')
 }
 
 const dbSettings = {
-	databaseURL: process.env.DATABASE_URL || 'mongo://localhost:27017/team-201-backend'
+	databaseURL: process.env.MONGO
 }
 
 module.exports = Object.assign({}, {serverSettings, dbSettings});
